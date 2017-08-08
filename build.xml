@@ -3,10 +3,7 @@
 	<description>
         Building Datasource Extension
     </description>
-  <!--
-  <property name="label" value="Microsoft SQL Server (Vendor Microsoft)"/>
-  <property name="id" value="7E673D15-D87C-41A6-8B5F1956528C605F"/>
-  -->
+
   <property name="temp" location="temp"/>
   <property name="dist"  location="dist"/>
 
@@ -138,16 +135,6 @@
     </path>
     <property name="jar" refid="path.jar"/>
     <getNameFrom path="${jar}" property="jarName"/>
-    
-    <!-- logo
-    
-    <path id="path.logo">
-      <fileset dir="${dir}" casesensitive="yes">
-        <include name="*.png"/>
-      </fileset>
-    </path>
-    <property name="logo" refid="path.logo"/> -->
-
 
 
     <!-- driver (cfc) -->
@@ -230,7 +217,6 @@ jdbc: "[{'label':'${label}','class':'${className}','bundleName':'${symbolicName}
         <include name="*.jar"/>
       </fileset>
     </copy>
-    <!-- <copy file="${jar}" tofile="${distl}/jars/${jarName}"/> -->
     
     <!-- copy the component necessary -->
     <copy file="${cfc}" tofile="${distl}/context/admin/dbdriver/${cfcName}"/>
